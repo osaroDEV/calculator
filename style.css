@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* background: #fdac61; */
+  background: #fff;
+}
+
+.calc {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 100px);
+}
+
+.calc button {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+  font-family: 100px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #3b3737;
+  transition: 0.5s all;
+}
+
+.calc button:active {
+  transform: translate(-10px, 10px);
+}
+
+.calc button:hover {
+  background-color: #f5f1da;
+  color: black;
+}
+
+.long {
+  grid-column: span 2;
+}
+
+.printout {
+  border-radius: 10px;
+  grid-column: 1 / -1;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calc .printout .answer {
+  color: whitesmoke;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.calc .printout .workspace {
+  color: white;
+  font-size: 50px;
+}
+
+.calc .numbers {
+  background: #080808;
+}
